@@ -1,0 +1,15 @@
+<p>This is the dashboard view.</p>
+        <a href = "#/chat">Cat Chat</a>
+
+
+        <h1> Add a cat </h1>
+        <div class="error">{{pageError}}</div>
+        Fluffiness: <input ng-model="fluffiness"/>
+        <button ng-click="submitCat()">Submit</button>
+
+
+        <h1> These are the cats you already have!</h1>
+
+        <ul>
+            <li ng-repeat="cat in cats">{{cat._id}} : {{cat.fluffiness}}</li>
+        </ul>

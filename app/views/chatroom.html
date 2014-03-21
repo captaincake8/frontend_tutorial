@@ -1,0 +1,16 @@
+<p>This is the chatroom view.</p>
+
+        <div ng-show="!!selectedUser">
+            Send a message to {{selectedUser.username}}: <input ng-model="message"/><button ng-click="sendMessage()">Send</button>
+        </div>
+
+        <div style="width:100px; background:blue; float:left;">
+            <div ng-repeat="user in users">
+                <button ng-click="selectUser(user)">{{user.username}}</button>
+            </div>
+        </div>
+
+        <div>
+            {{messages}}
+        </div>
+
